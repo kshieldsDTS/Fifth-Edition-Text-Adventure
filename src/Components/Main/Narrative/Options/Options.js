@@ -2,7 +2,7 @@ import React from 'react';
 
 function Options(props) {
     return (
-        <div>
+        <div className='options-container'>
             Hello from Options
         </div>
     );

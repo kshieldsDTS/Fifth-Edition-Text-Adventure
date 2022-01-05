@@ -3,7 +3,7 @@ import Options from './Options/Options'
 
 function Narrative(props) {
     return (
-        <div>
+        <div className='narrative-container'>
             Hello from Narrative
             <Options />
         </div>

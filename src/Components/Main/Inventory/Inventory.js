@@ -2,8 +2,8 @@ import React from 'react';
 
 function Inventory(props) {
     return (
-        <div>
-            Hello from Inventory
+        <div className='inventory-container'>
+            <p>Hello from Inventory</p>
         </div>
     );
 }
