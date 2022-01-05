@@ -15,6 +15,12 @@ const chainmail = {
     armor: 16,
     description: 'A suit of chainmail, designed to protect against slashing attacks.'
 }
+const healingPotion = {
+    name: 'Healing Potion',
+    description: 'A simple vial with a bright, crimson liquid within. Imbibe the contents to heal your wounds.',
+    minHealing: 8,
+    maxHealing: 20,
+}
 const initialPlayerStats = {
     playerCurrentHP: 50,
     playerMaxHP: 50,
@@ -24,10 +30,12 @@ const initialPlayerStats = {
         weapon: longsword,
         armor: chainmail,
         consumables: {
-            healingPotion: 3,
+            potion: healingPotion,
+            healingPotionCount: 3,
         }
     }
 }
+
 function Main(props) {
     const [ playerStats, setPlayerStats ] = useState(initialPlayerStats)
     return (
@@ -40,7 +48,9 @@ function Main(props) {
                 playerItems={playerStats.playerItems}
             />
             <Inventory 
-                playerItems={playerStats.playerItems}/>
+                playerItems={playerStats.playerItems}
+                consumables={playerStats.playerItems.consumables.healingPotion}
+                healingPotionCount={playerStats.playerItems.consumables.healingPotionCount}/>
             <Narrative 
                 setPlayerStats={setPlayerStats}/>       
         </div>
