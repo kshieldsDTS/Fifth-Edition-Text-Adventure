@@ -1,0 +1,28 @@
+.main-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 5fr;
+}
+.character-status {
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 5fr;
+    grid-template-rows: repeat(3, fr);
+}
+.icon {
+    max-height: 200px;
+    grid-row: 1 / span 3;
+}
+.hp {
+    grid-column: 2;
+    grid-row: 1;
+}
+.armor {
+    grid-column: 2;
+    grid-row: 2;
+}
+.atb {
+    grid-column: 2;
+    grid-row: 3;
+}
