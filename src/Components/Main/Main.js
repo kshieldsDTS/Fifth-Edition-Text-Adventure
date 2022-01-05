@@ -52,7 +52,8 @@ function Main(props) {
                 consumables={playerStats.playerItems.consumables.healingPotion}
                 healingPotionCount={playerStats.playerItems.consumables.healingPotionCount}/>
             <Narrative 
-                setPlayerStats={setPlayerStats}/>       
+                setPlayerStats={setPlayerStats}
+                playerStats={playerStats}/>       
         </div>
     );
 }
