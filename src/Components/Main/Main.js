@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Status from './Status/Status';
 import Inventory from './Inventory/Inventory';
 import Narrative from './Narrative/Narrative';
+import { Story } from '../../Data/Data'
 const longsword = {
     name: 'Longsword',
     minDamage: 1,
@@ -39,6 +40,7 @@ const initialPlayerStats = {
 
 function Main(props) {
     const [ playerStats, setPlayerStats ] = useState(initialPlayerStats)
+    const [ currentTextID, setCurrentTextID ] = useState(0)
     return (
         <div className='main-container'>
             <Status
@@ -51,10 +53,15 @@ function Main(props) {
             <Inventory 
                 playerItems={playerStats.playerItems}
                 consumables={playerStats.playerItems.consumables.healingPotion}
-                healingPotionCount={playerStats.playerItems.consumables.healingPotionCount}/>
-            <Narrative 
+                healingPotionCount={playerStats.playerItems.consumables.healingPotionCount}
+            />
+            <Narrative
+                story={Story} 
                 setPlayerStats={setPlayerStats}
-                playerStats={playerStats}/>     
+                playerStats={playerStats}
+                currentTextID={currentTextID}
+                setCurrentTextID={setCurrentTextID}
+            />     
         </div>
     );
 }

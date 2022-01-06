@@ -13,19 +13,20 @@ function Narrative(props) {
         enemyWeapon: 'axe'
     }
     const [enemyStats, setEnemyStats] = useState(orc)
+    function handleTest(){
+        console.log(props.story[props.currentTextID].text);
+        props.setCurrentTextID(1)
+    };
     return (
         <div className='narrative-container'>
             <div className='narrative'>
-                <p>You are interrupted by a bellowing roar from behind you. You turn to face an {enemyStats.enemyName}, covered in blood and wielding a wicked looking {enemyStats.enemyWeapon}. The {enemyStats.enemyName} is charging at you with its {enemyStats.enemyWeapon} raised high, preparing to strike!</p>
+                <p>{props.story[props.currentTextID].text}</p>
+                <button onClick={handleTest}>Test</button>
                 <Options
                     playerStats={props.playerStats}
                     enemyStats={enemyStats} 
                     setPlayerStats={props.setPlayerStats}
                     setEnemyStats={setEnemyStats}/>
-            </div>
-            <div>
-                <p>{enemyStats.enemyName}</p>
-                <p>HP: {enemyStats.enemyCurrentHP}/{enemyStats.enemyMaxHP}</p>
             </div>
         </div>
     );
