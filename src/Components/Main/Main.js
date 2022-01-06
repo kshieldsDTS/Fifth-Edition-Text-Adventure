@@ -26,6 +26,7 @@ const initialPlayerStats = {
     playerMaxHP: 50,
     playerArmorClass: 16,
     playerAttackBonus: 5,
+    playerDamageBonus: 3,
     playerItems: {
         weapon: longsword,
         armor: chainmail,
@@ -53,7 +54,7 @@ function Main(props) {
                 healingPotionCount={playerStats.playerItems.consumables.healingPotionCount}/>
             <Narrative 
                 setPlayerStats={setPlayerStats}
-                playerStats={playerStats}/>       
+                playerStats={playerStats}/>     
         </div>
     );
 }

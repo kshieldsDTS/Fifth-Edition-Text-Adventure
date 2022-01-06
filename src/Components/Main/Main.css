@@ -1,3 +1,12 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
 .main-container {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
@@ -12,6 +21,9 @@
     grid-template-rows: repeat(3, 1fr);
     background-color: rgb(51, 55, 59);
     border: solid gold
+}
+progress {
+    background-color: solid green;
 }
 .icon {
     max-height: 200px;

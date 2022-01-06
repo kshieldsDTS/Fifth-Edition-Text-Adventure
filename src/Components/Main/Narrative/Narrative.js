@@ -1,6 +1,6 @@
 import React from 'react';
 import Options from './Options/Options'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 function Narrative(props) {
     const orc = {
@@ -13,9 +13,6 @@ function Narrative(props) {
         enemyWeapon: 'axe'
     }
     const [enemyStats, setEnemyStats] = useState(orc)
-    useEffect(() => {
-
-    }, [enemyStats, props.playerStats])
     return (
         <div className='narrative-container'>
             <div className='narrative'>
