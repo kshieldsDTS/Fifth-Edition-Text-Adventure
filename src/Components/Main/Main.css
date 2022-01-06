@@ -23,7 +23,7 @@ body {
     border: solid gold
 }
 progress {
-    background-color: solid green;
+    background-color: green;
 }
 .icon {
     max-height: 200px;
