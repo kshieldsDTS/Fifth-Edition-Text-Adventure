@@ -25,6 +25,15 @@ body {
 progress {
     background-color: green;
 }
+progress::-webkit-progress-value {
+    background: green;
+    border: 1px solid black;
+    box-shadow: 0 0 10px 1px lightgreen;
+}
+progress::-webkit-progress-bar {
+    background: white;
+    border: 1px solid black;
+}
 .icon {
     max-height: 200px;
     grid-row: 1 / span 3;
