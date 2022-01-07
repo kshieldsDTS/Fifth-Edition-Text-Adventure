@@ -37,13 +37,8 @@ function CombatModal(props) {
 		}
     return (
 			<div className='combat-modal'>
-				<p>{props.enemyStats.nameUpper}</p>
-				<p>HP: {props.enemyStats.currentHP}/{props.enemyStats.maxHP}</p>
-				<p>Armor Class: {props.enemyStats.armorClass}</p>
-				<p>Attack Bonus: {props.enemyStats.attackBonus}</p>
-				<p>Minimum Damage: {props.enemyStats.minDamage}</p>
-				<p>Maximum Damage: {props.enemyStats.maxDamage}</p>
-				<p>Bonus Damage: {props.enemyStats.damageBonus}</p>
+				<p>{props.enemyStats.nameUpper} Health</p>
+                <progress value={props.enemyStats.currentHP} max={props.enemyStats.maxHP}/>
 				<p>{combatMessage}</p>
                 {playerTurn ? 
                     <div>

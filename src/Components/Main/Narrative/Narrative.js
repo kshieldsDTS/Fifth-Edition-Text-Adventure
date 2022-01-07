@@ -30,7 +30,6 @@ function Narrative(props) {
     return (
 		<div className='narrative-container'>
 			<div className='narrative'>
-				<button onClick={fetchEnemy}>Fetch Orc</button>
 				{enemyStats.active ? 
 					<CombatModal 
 						enemyStats={enemyStats}

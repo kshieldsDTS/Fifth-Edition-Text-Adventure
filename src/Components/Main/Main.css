@@ -6,6 +6,11 @@ body {
     align-items: center;
     height: 100vh;
     width: 100vw;
+    background-color: black;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .main-container {
     display: grid;
@@ -82,13 +87,18 @@ progress::-webkit-progress-bar {
     justify-content: center;
     align-items: center;
     background-image: url(https://i.imgur.com/Ml968v8.jpg);
+    height: 100vh;
 }
 .narrative {
     background-color: slategray;
     color: white;
     border: solid red;
     padding: 20px;
-    max-width: 50%;
+    width: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .options-container {
     display: flex;
@@ -106,4 +116,24 @@ progress::-webkit-progress-bar {
     height: 100%;
     background-color: black;
     background-color: rgba(0,0,0,0.4);
+    height: 50vh;
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.combat-modal p {
+    margin: 10px;
+    padding: 15px;
+}
+.combat-modal progress {
+    text-align: center;
+}
+.combat-modal button {
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    margin: 10px;
+    padding: 5px;
 }
