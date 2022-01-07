@@ -37,6 +37,7 @@ function Narrative(props) {
 						playerStats={props.playerStats}
 						setEnemyStats={setEnemyStats}
 						setPlayerStats={props.setPlayerStats}
+						restartGame={props.restartGame}
 					/> : null}
 				{enemyStats.active ? null : 
 					<p>{props.story[props.currentTextID].text}</p>}

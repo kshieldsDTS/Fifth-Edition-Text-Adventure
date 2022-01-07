@@ -66,6 +66,7 @@ function Main(props) {
                 playerStats={playerStats}
                 currentTextID={currentTextID}
                 setCurrentTextID={setCurrentTextID}
+                restartGame={restartGame}
             />     
         </div>
     );
