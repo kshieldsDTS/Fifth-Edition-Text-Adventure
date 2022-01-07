@@ -4,11 +4,11 @@ function Inventory(props) {
     return (
         <div className='inventory-container'>
             <div className='equipment'>
-                <h3 className='item-name'>Weapon: {props.items.weapon.name}</h3>
-                <p className='item-stat'>Damage: {props.items.weapon.minDamage}-{props.items.weapon.maxDamage} slashing</p>
+                <h3 className='item-name'>Weapon: {props.items.weapon.nameUpper}</h3>
+                <p className='item-stat'>Damage: {props.items.weapon.minDamage}-{props.items.weapon.maxDamage}</p>
                 <p className='item-description'>{props.items.weapon.description}</p>
-                <h3 className='item-name'>Armor: {props.items.armor.name}</h3>
-                <p className='item-stat'>Armor Class: {props.items.armor.armor}</p>
+                <h3 className='item-name'>Armor: {props.items.armor.nameUpper}</h3>
+                <p className='item-stat'>Armor Class: {props.items.armor.armorClass}</p>
                 <p className='item-description'>{props.items.armor.description}</p>
                 <h3 className='item-name'>Potions: {props.items.consumables.potion.name}</h3>
                 <p className='item-stat'>Healing: {props.items.consumables.potion.minHealing}-{props.items.consumables.potion.maxHealing}HP</p>

@@ -28,7 +28,7 @@ function CombatModal(props) {
 			if (attackRoll-props.enemyStats.attackBonus === 20) {		
 				props.setPlayerStats({ ...props.playerStats,currentHP: props.playerStats.currentHP-damage*2 });
 				setCombatMessage(`The ${props.enemyStats.nameLower} rolled a Natural 20. The ${props.enemyStats.nameLower} makes a devastating strike against you! You take ${damage*2} damage!`)
-			} else if (attackRoll>=props.playerStats.armorClass) {
+			} else if (attackRoll>=props.playerStats.items.armor.armorClass) {
 			    props.setPlayerStats({ ...props.playerStats, currentHP: props.playerStats.currentHP-damage });
                 setCombatMessage(`The ${props.enemyStats.nameLower} rolled ${attackRoll} to hit! The ${props.enemyStats.nameLower} makes a solid hit against you! You take ${damage} damage!`)
 			} else if (attackRoll<props.playerStats.armorClass) {

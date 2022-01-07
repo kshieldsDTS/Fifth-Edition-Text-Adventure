@@ -5,6 +5,8 @@ import Status from './Status/Status';
 import Inventory from './Inventory/Inventory';
 import Narrative from './Narrative/Narrative';
 import { Story } from '../../Data/Data'
+import { Items } from '../../Data/Items'
+
 const longsword = {
     name: 'Longsword',
     minDamage: 1,
@@ -25,12 +27,11 @@ const healingPotion = {
 const initialPlayerStats = {
     currentHP: 50,
     maxHP: 50,
-    armorClass: 16,
     attackBonus: 5,
     damageBonus: 3,
     items: {
-        weapon: longsword,
-        armor: chainmail,
+        weapon: Items[0],
+        armor: Items[1],
         consumables: {
             potion: healingPotion,
             healingPotionCount: 3,
@@ -45,13 +46,12 @@ function Main(props) {
         setPlayerStats(initialPlayerStats)
         setCurrentTextID(0)
     }
-    // restartGame();
     return (
         <div className='main-container'>
             <Status
                 currentHP={playerStats.currentHP} 
                 maxHP={playerStats.maxHP}
-                armorClass={playerStats.armorClass}
+                armorClass={playerStats.items.armor.armorClass}
                 attackBonus={playerStats.attackBonus}
                 items={playerStats.items}
             />

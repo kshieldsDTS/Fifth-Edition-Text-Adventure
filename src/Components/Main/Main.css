@@ -31,6 +31,7 @@ button {
 }
 progress {
     background-color: green;
+    transition: width 250ms, background 100ms;
 }
 progress::-webkit-progress-value {
     background: green;
@@ -108,7 +109,7 @@ progress::-webkit-progress-bar {
 .option {
     background-color: lightblue;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
     margin: 5px;
 }
 .combat-modal {
