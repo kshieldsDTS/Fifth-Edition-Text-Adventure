@@ -31,7 +31,9 @@ function Narrative(props) {
 		<div className='narrative-container'>
 			<div className='narrative'>
 				{enemyStats.active ? 
-					<CombatModal 
+					<CombatModal
+						nextID={props.story[props.currentTextID].options[0].nextID}
+						setCurrentTextID={props.setCurrentTextID} 
 						enemyStats={enemyStats}
 						playerStats={props.playerStats}
 						setEnemyStats={setEnemyStats}

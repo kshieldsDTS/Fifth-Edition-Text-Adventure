@@ -2,11 +2,14 @@ import React from 'react';
 
 function Options(props) {
     function selectOption() {
-		console.log(props.option);
-		if (props.option.enemyName) {
+		if (props.option.victory) {
+			props.setCurrentTextID(0)
+		} else if (props.option.enemyName) {
 			props.fetchEnemy(props.option.enemyName)
+		} else {
+			props.setCurrentTextID(props.option.nextID)
 		}
-		props.setCurrentTextID(props.option.nextID)
+		
 	}
 	return (
 		<div className='options-container'>

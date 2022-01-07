@@ -29,9 +29,9 @@ export const Story = [
 		text: 'The orc lays dead at your feet, slashed to ribbons by your longsword.',
 		options: [
 			{
-				text: 'Claim Victory!',
+				text: 'Claim victory and restart the game!',
 				nextID: 2,
-				restartGame: true
+				victory: true,
 			},
 		],
 	},
