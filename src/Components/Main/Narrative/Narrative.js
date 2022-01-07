@@ -7,14 +7,14 @@ function Narrative(props) {
         const [enemyStats, setEnemyStats] = useState({});
 				function playerAttack() {
                     if (Math.floor(Math.random()*20+1)===20) {
-                        const damage = Math.floor(Math.random()*props.playerStats.playerItems.weapon.maxDamage+props.playerStats.playerItems.weapon.minDamage)*2+props.playerStats.playerDamageBonus;
+                        const damage = Math.floor(Math.random()*props.playerStats.items.weapon.maxDamage+props.playerStats.items.weapon.minDamage)*2+props.playerStats.damageBonus;
                         setEnemyStats({...enemyStats, currentHP: enemyStats.currentHP-damage })
 						console.log('playerCrit');
-					} else if (Math.floor(Math.random()*20+1+props.playerStats.playerAttackBonus)>=enemyStats.armorClass) {
-                        const damage = Math.floor(Math.random()*props.playerStats.playerItems.weapon.maxDamage +props.playerStats.playerItems.weapon.minDamage)+props.playerStats.playerDamageBonus;	
+					} else if (Math.floor(Math.random()*20+1+props.playerStats.attackBonus)>=enemyStats.armorClass) {
+                        const damage = Math.floor(Math.random()*props.playerStats.items.weapon.maxDamage+props.playerStats.items.weapon.minDamage)+props.playerStats.damageBonus;	
                         setEnemyStats({...enemyStats, currentHP: enemyStats.currentHP-damage })
 						console.log('player hit');
-					} else if (Math.floor(Math.random()*20+1+props.playerStats.playerAttackBonus)<enemyStats.armorClass) {
+					} else if (Math.floor(Math.random()*20+1+props.playerStats.attackBonus)<enemyStats.armorClass) {
 							console.log('player miss');
 					} else if (Math.floor(Math.random() * 20 + 1) === 1) {
 							console.log('player crit miss');
@@ -23,11 +23,11 @@ function Narrative(props) {
 				function enemyAttack() {
                     if (Math.floor(Math.random()*20+1) === 20) {
                         const damage = Math.floor(Math.random()*enemyStats.maxDamage+enemyStats.minDamage)*2+enemyStats.damageBonus
-                        props.setPlayerStats ({...props.playerStats, playerCurrentHP: props.playerStats.playerCurrentHP-damage })
+                        props.setPlayerStats ({...props.playerStats, currentHP: props.playerStats.currentHP-damage })
 						console.log('orc crit');
-					} else if (Math.floor(Math.random()*20+1+enemyStats.attackBonus)>=props.playerStats.playerArmorClass) {
+					} else if (Math.floor(Math.random()*20+1+enemyStats.attackBonus)>=props.playerStats.armorClass) {
                         const damage = Math.floor(Math.random()*enemyStats.maxDamage +enemyStats.minDamage)+enemyStats.damageBonus	
-                        props.setPlayerStats ({...props.playerStats, playerCurrentHP: props.playerStats.playerCurrentHP-damage })
+                        props.setPlayerStats ({...props.playerStats, currentHP: props.playerStats.currentHP-damage })
 						console.log('orc hit');
 					} else if (Math.floor(Math.random()*20+1+enemyStats.attackBonus)<props.playerStats.playerArmorClass) {
 							console.log('orc miss');
@@ -82,17 +82,19 @@ function Narrative(props) {
 					<p>Bonus Damage: {enemyStats.damageBonus}</p>
 					<button onClick={fetchEnemy}>Fetch Orc</button>
 					<button onClick={handleCombat}>Fight Orc</button>
+					{enemyStats.active ? 
+						<CombatModal 
+							enemyStats={enemyStats}
+							playerStats={props.playerStats}
+							setEnemyStats={setEnemyStats}
+							setPlayerStats={props.setPlayerStats}
+						/> : null}
 					<p>{props.story[props.currentTextID].text}</p>
-					{enemyStats.active ? <CombatModal /> : null}
 					{props.story[props.currentTextID].options.map((e, index) => {
 						return (
 							<Options
-								key={`${props.story[props.currentTextID].id}${
-									props.story[props.currentTextID].options[index].text
-								}`}
-								optionsText={
-									props.story[props.currentTextID].options[index].text
-								}
+								key={`${props.story[props.currentTextID].id}${props.story[props.currentTextID].options[index].text}`}
+								optionsText={props.story[props.currentTextID].options[index].text}
 								nextID={props.story[props.currentTextID].options[index].nextID}
 								text={props.story[props.currentTextID]}
 								playerStats={props.playerStats}
