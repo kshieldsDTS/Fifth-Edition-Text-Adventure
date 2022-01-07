@@ -15,11 +15,23 @@ export const Story = [
 		options: [
 			{
 				text: 'Fight the orc.',
-				nextID: 1,
+				nextID: 2,
+				enemyName: 'orc',
 			},
 			{
 				text: 'Attempt to run.',
+				nextID: 3,
+			},
+		],
+	},
+	{
+		id: 2,
+		text: 'The orc lays dead at your feet, slashed to ribbons by your longsword.',
+		options: [
+			{
+				text: 'Claim Victory!',
 				nextID: 2,
+				restartGame: true
 			},
 		],
 	},

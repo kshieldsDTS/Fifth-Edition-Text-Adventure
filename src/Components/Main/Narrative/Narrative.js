@@ -5,8 +5,8 @@ import CombatModal from './CombatModal/CombatModal';
 
 function Narrative(props) {
     const [enemyStats, setEnemyStats] = useState({});
-	function fetchEnemy() {
-		const url = 'https://www.dnd5eapi.co/api/monsters/orc';
+	function fetchEnemy(name) {
+		const url = `https://www.dnd5eapi.co/api/monsters/${name}`;
 		fetch(url)
 			.then((res) => res.json())
 			.then((res) => {
@@ -47,11 +47,13 @@ function Narrative(props) {
 						<Options
 							key={`${props.story[props.currentTextID].id}${props.story[props.currentTextID].options[index].text}`}
 							optionsText={props.story[props.currentTextID].options[index].text}
-							nextID={props.story[props.currentTextID].options[index].nextID}
+							option={props.story[props.currentTextID].options[index]}
 							text={props.story[props.currentTextID]}
 							playerStats={props.playerStats}
 							setPlayerStats={props.setPlayerStats}
 							setCurrentTextID={props.setCurrentTextID}
+							restartGame={props.restartGame}
+							fetchEnemy={fetchEnemy}
 						/>
 					);
 				})}

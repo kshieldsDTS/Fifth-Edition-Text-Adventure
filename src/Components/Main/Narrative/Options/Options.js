@@ -1,9 +1,12 @@
 import React from 'react';
-import { useState } from 'react'
 
 function Options(props) {
     function selectOption() {
-		props.setCurrentTextID(props.nextID);
+		console.log(props.option);
+		if (props.option.enemyName) {
+			props.fetchEnemy(props.option.enemyName)
+		}
+		props.setCurrentTextID(props.option.nextID)
 	}
 	return (
 		<div className='options-container'>
