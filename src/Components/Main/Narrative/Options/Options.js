@@ -7,13 +7,11 @@ function Options(props) {
 		} else if (props.option.enemyName) {
 			props.fetchEnemy(props.option.enemyName)
 		} else if (props.option.equipWeapon) {
-			props.setPlayerStats({ ...props.playerStats, items: {
-				...props.playerStats.items, weapon: props.option.equipWeapon}
-			})
+			props.setPlayerStats({ ...props.playerStats, items: { ...props.playerStats.items, weapon: props.option.equipWeapon }})
+			props.setCurrentTextID(props.option.nextID);
 		} else if (props.option.equipArmor) {
-			props.setPlayerStats({ ...props.playerStats, items: {
-				...props.playerStats.items, armor: props.option.equipArmor}
-			})
+			props.setPlayerStats({ ...props.playerStats, items: { ...props.playerStats.items, armor: props.option.equipArmor }})
+			props.setCurrentTextID(props.option.nextID)
 		}else {
 			props.setCurrentTextID(props.option.nextID)
 		}

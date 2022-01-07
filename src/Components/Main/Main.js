@@ -7,17 +7,6 @@ import Narrative from './Narrative/Narrative';
 import { Story } from '../../Data/Data'
 import { Items } from '../../Data/Items'
 
-const longsword = {
-    name: 'Longsword',
-    minDamage: 1,
-    maxDamage: 8,
-    description: 'A fine steel longsword, forged by the finest blacksmiths in the kingdom.'
-}
-const chainmail = {
-    name: 'Chain Mail',
-    armor: 16,
-    description: 'A suit of chainmail, designed to protect against slashing attacks.'
-}
 const healingPotion = {
     name: 'Healing Potion',
     description: 'A simple vial with a bright, crimson liquid within. Imbibe the contents to heal your wounds.',

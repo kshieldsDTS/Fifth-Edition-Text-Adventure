@@ -28,39 +28,51 @@ function Narrative(props) {
 			});
 	}
     return (
-		<div className='narrative-container'>
-			<div className='narrative'>
-				{enemyStats.active ? 
-					<CombatModal
-						nextID={props.story[props.currentTextID].options[0].nextID}
-						setCurrentTextID={props.setCurrentTextID} 
-						enemyStats={enemyStats}
-						playerStats={props.playerStats}
-						setEnemyStats={setEnemyStats}
-						setPlayerStats={props.setPlayerStats}
-						restartGame={props.restartGame}
-					/> : null}
-				{enemyStats.active ? null : 
-					<p>{props.story[props.currentTextID].text}</p>}
-				{enemyStats.active ? null :
-				props.story[props.currentTextID].options.map((e, index) => {
-					return (
-						<Options
-							key={`${props.story[props.currentTextID].id}${props.story[props.currentTextID].options[index].text}`}
-							optionsText={props.story[props.currentTextID].options[index].text}
-							option={props.story[props.currentTextID].options[index]}
-							text={props.story[props.currentTextID]}
-							playerStats={props.playerStats}
-							setPlayerStats={props.setPlayerStats}
+			<div className='narrative-container'>
+				<div className='narrative'>
+					{enemyStats.active ? (
+						<CombatModal
+							nextID={props.story[props.currentTextID].options[0].nextID}
 							setCurrentTextID={props.setCurrentTextID}
+							enemyStats={enemyStats}
+							playerStats={props.playerStats}
+							setEnemyStats={setEnemyStats}
+							setPlayerStats={props.setPlayerStats}
 							restartGame={props.restartGame}
-							fetchEnemy={fetchEnemy}
 						/>
-					);
-				})}
+					) : null}
+					{enemyStats.active ? null : (
+						<div>
+							<p>{props.story[props.currentTextID].text}</p>
+							<p>{props.story[props.currentTextID].text2}</p>
+							<p>{props.story[props.currentTextID].text3}</p>
+							<p>{props.story[props.currentTextID].text4}</p>
+						</div>
+					)}
+					{enemyStats.active
+						? null
+						: props.story[props.currentTextID].options.map((e, index) => {
+								return (
+									<Options
+										key={`${props.story[props.currentTextID].id}${
+											props.story[props.currentTextID].options[index].text
+										}`}
+										optionsText={
+											props.story[props.currentTextID].options[index].text
+										}
+										option={props.story[props.currentTextID].options[index]}
+										text={props.story[props.currentTextID]}
+										playerStats={props.playerStats}
+										setPlayerStats={props.setPlayerStats}
+										setCurrentTextID={props.setCurrentTextID}
+										restartGame={props.restartGame}
+										fetchEnemy={fetchEnemy}
+									/>
+								);
+						  })}
+				</div>
 			</div>
-		</div>
-	);
+		);
 }
 
 export default Narrative;
