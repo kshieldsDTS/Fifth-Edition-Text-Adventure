@@ -4,6 +4,13 @@ function Options(props) {
     function selectOption() {
 		if (props.option.restartGame) {
 			props.restartGame()
+		} else if (props.option.healing) {
+			if (props.playerStats.currentHP+props.option.healing>props.playerStats.maxHP) {
+				props.setPlayerStats({...props.playerStats, currentHP: props.playerStats.maxHP})
+			} else {
+				props.setPlayerStats({...props.playerStats, currentHP: props.playerStats.currentHP+props.option.healing})
+			}
+			props.setCurrentTextID(props.option.nextID);
 		} else if (props.option.enemyName) {
 			props.fetchEnemy(props.option.enemyName)
 		} else if (props.option.equipWeapon) {

@@ -88,15 +88,38 @@ export const Story = [
 		id: 7,
 		text: 'The young woman stops in her tracks and turns to face you. She scrutinizes you for a moment.',
 		text2: `"Y-you don't look like a soldier!" she shouts. She begins to turn away, when she notices the blood on your hand, and the red that stains the shoulders of your tunic.`,
-		text3: `"You're hurt!" she exclaims, and her expression changes to that of someone who has just been struck by a realization. "You're the soldier my father found!`,
+		text3: `"You're hurt!" she exclaims, and her expression changes to that of someone who has just been struck by a revelation. "You're the soldier my father found! Come in, come in!" she says, motioning for you to follow her into the house.`,
 		options: [
 			{
-				text: "",
-				nextID: 7,
+				text: 'Thank her for the kind offer, but decline, and continue walking down the river.',
+				nextID: 100000,
 			},
 			{
-				text: "",
-				nextID: 1000000,
+				text: 'Accept the hospitality and enter the house.',
+				nextID: 8,
+				healing: 5,
+			},
+		],
+	},
+	{
+		id: 8,
+		text: 'You follow the young woman into the house. It is a small residence, with two small beds in the far corner, and a small fireplace on the far wall. The woman motions for you to sit in one of the simple wooden chairs that flanks the fireplace. You oblige her and make your way to one of the chairs.',
+		text2:
+			'As you take a seat, the young woman unwraps the bandage around your head. You hear her give a slight gasp as the last wrap falls off. She quickly composes herself, and begins pulling herbs and salves from assorted jars that are scattered about the many shelves that line the walls. She mixes up the ingredients into a sickly green paste, and applies it to your wound. While it burns initially, a cooling wave of relief washes over the wound.',
+		text3: `"Did you happen to see my father?" she asks, worry washing over her face once more. "He's been gone for several hours, and I'm starting to get worried."`,
+		options: [
+			{
+				text: 'Say that you have not seen her father.',
+				nextID: 9,
+			},
+		],
+	},
+	{
+		id: 9,
+		text: `As you begin to explain your circumstances, a the door swings open`,
+		options: [
+			{
+				text: 'Say that you have not seen her father.',
 			},
 		],
 	},

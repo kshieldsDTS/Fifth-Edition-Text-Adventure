@@ -21,5 +21,5 @@ export const Items = [
         minDamage: 1,
         maxDamage: 4,
         description: 'A simple dagger, commonly used by cutpurses and rogues. Better than nothing!'
-    }
+    },
 ]

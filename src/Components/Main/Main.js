@@ -14,10 +14,13 @@ const healingPotion = {
     maxHealing: 20,
 }
 const initialPlayerStats = {
-    currentHP: 50,
+    currentHP: 5,
     maxHP: 50,
     attackBonus: 5,
     damageBonus: 3,
+    keyItems: [{
+        itemOne: Items[3],
+    }],
     items: {
         weapon: Items[0],
         armor: Items[1],
@@ -27,7 +30,6 @@ const initialPlayerStats = {
         }
     }
 }
-
 function Main(props) {
     const [ playerStats, setPlayerStats ] = useState(initialPlayerStats)
     const [ currentTextID, setCurrentTextID ] = useState(0)
@@ -44,10 +46,12 @@ function Main(props) {
                 attackBonus={playerStats.attackBonus}
                 items={playerStats.items}
             />
-            <Inventory 
+            <Inventory
+                playerStats={playerStats} 
                 items={playerStats.items}
-                consumables={playerStats.items.consumables.healingPotion}
+                consumables={playerStats.items.consumables}
                 healingPotionCount={playerStats.items.consumables.healingPotionCount}
+                setPlayerStats={setPlayerStats}
             />
             <Narrative
                 story={Story} 
