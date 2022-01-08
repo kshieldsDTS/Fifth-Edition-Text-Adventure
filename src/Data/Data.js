@@ -71,7 +71,7 @@ export const Story = [
 	},
 	{
 		id: 6,
-		text: 'You head south toward the riverside house. As you draw near, you see a figure step out from behind a small wall surrounding the home. The figure appears to be a woman, who upon seeing you, hurriedly runs back toward the building.',
+		text: 'You head south toward the riverside house. As you draw near, you see a figure step out from behind a small wall surrounding the home. The figure appears to be a young woman with straw-colored hair, dressed in a simple smock. The woman, upon seeing you, hurriedly runs back toward the building.',
 		text2: '"Stay away!", she shouts, with a look of terror on her face.',
 		options: [
 			{
@@ -116,11 +116,30 @@ export const Story = [
 	},
 	{
 		id: 9,
-		text: `As you begin to explain your circumstances, a the door swings open`,
+		text: `As you begin to explain your circumstances, a the door swings open wide. A stocky man, with similar facial features and hair color as the young woman, barges into the house. He clutches his stomach, which appears to be bleeding profusely.`,
+		text2: `"You're here? Thank the gods!" he exclaims. "A goblin is chasing me! Help!"`,
 		options: [
 			{
-				text: 'Say that you have not seen her father.',
+				text: 'Prepare for battle!',
+				enemyName: 'goblin',
+				nextID: 10,
 			},
+		],
+	},
+	{
+		id: 10,
+		text: `The goblin lays dead on the ground. You gasp heavily from the exertion, and slump down on the ground, trying to catch your breath. The young woman uses some of the paste she had applied to your head wound to her father's wound. The man sits up against a wall, and speaks once he catches his breath.`,
+		text2: `"Guess it was a good thing I tried to patch you up when I found you," he says, wincing from the pain in his stomach, as he shuffles over toward you. "Bartholomew Daleborn, at your service. No offense friend, but you still look pretty rough, and that tussle with the goblin didn't help. Let Delilah here patch you up some more and you should get some rest."`,
+		options: [
+			{
+				text: 'Accept the offer and stay the night.',
+				healing: 10,
+				nextID: 11,
+			},
+			{
+				text: `Decline the offer and continue along the river.`,
+				nextID: 12,
+			}
 		],
 	},
 ];

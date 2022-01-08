@@ -14,13 +14,10 @@ const healingPotion = {
     maxHealing: 20,
 }
 const initialPlayerStats = {
-    currentHP: 5,
+    currentHP: 15,
     maxHP: 50,
     attackBonus: 5,
     damageBonus: 3,
-    keyItems: [{
-        itemOne: Items[3],
-    }],
     items: {
         weapon: Items[0],
         armor: Items[1],
