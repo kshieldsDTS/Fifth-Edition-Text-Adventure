@@ -3,6 +3,7 @@ export const Story = [
 	{
 		id: 0,
 		text: 'Welcome to the world of Hydraxus! In this text adventure, you will be playing the role of a soldier in the Grand Army of Syndri. The Grand Army has recently clashed with the enemy from the nation of Calashar. During the battle, you were wounded and knocked unconscious. Your adventure begins as your eyes begin to open... ',
+		text2: `Due to the random nature of combat, you may not always survive the early encounters. Your equipment can be upgraded to improve your chances, but sometimes fate gets its way.`,
 		options: [
 			{
 				text: 'Begin the adventure!',
@@ -209,7 +210,7 @@ export const Story = [
 	{
 		id: 16,
 		text: `You climb up onto a ledge to provide some measure of protection from wandering creatures before resting. Sleep does not come easily, as you keep a watchful eye and listen for any possible threats. However, you do eventually sleep as the miles of walking catch up to you.`,
-		text2: `You awaken as the sun rises. Its blinding light and heat rousing you from your slumber. You drop from the ledge and stretch a bit before following the army's tracks.`,
+		text2: `You awaken as the sun rises. Its blinding light and heat rousing you from your slumber. You drop from the ledge and stretch a bit before following the army's tracks back toward the north, where you had come from.`,
 		options: [
 			{
 				text: `Follow the tracks.`,
@@ -218,13 +219,114 @@ export const Story = [
 		],
 	},
 	{
-		id: 16,
-		text: `You climb up onto a ledge to provide some measure of protection from wandering creatures before resting. Sleep does not come easily, as you keep a watchful eye and listen for any possible threats. However, you do eventually sleep as the miles of walking catch up to you.`,
-		text2: `You awaken as the sun rises. Its blinding light and heat rousing you from your slumber. You drop from the ledge and stretch a bit before following the army's tracks.`,
+		id: 17,
+		text: `You follow the familiar path, tracking the many muddied bootprints of your fellow soldiers. After several hours, you come across the site of the battle where you had been injured. Broken weapons, banners, and armor are strewn about. The corpses left behind appear to belong to the soldiers of Calashar, suggesting that Syndri was victorious, as they had gathered and burned their dead. Scanning the battlefield, a grouping of a half-dozen burned structures on a nearby hilltop confirms your logic.`,
+		text2: `Further inspection of the battleground reveals that the army did camp about half of a mile to the north. You find the remains of some crates and tents left behind. They likely stayed for a night to rest before continuing north toward the enemy city of Velben. You can continue forward or inspect the items left behind by the army.`,
 		options: [
 			{
-				text: `Follow the tracks.`,
-				nextID: 17,
+				text: `Check the crates.`,
+				nextID: 18,
+				equipArmor: Items[5],
+			},
+			{
+				text: 'Check the tents.',
+				nextID: 19,
+				addPotion: 1,
+			},
+			{
+				text: 'Continue tracking the army.',
+				nextID: 20,
+			},
+		],
+	},
+	{
+		id: 18,
+		text: `Checking through the crates, you find that most of the contents appear to be broken armor pieces. A large number of and chain mail armors have been left, and most are damaged beyond repair. With some digging, you find one chain mail that sustained damage only in the area below the torso. With some effort, you pull it free.`,
+		text2:
+			'You remove some of the lower links and convert the chain mail into a servicable chain shirt.',
+		text3: `Wiping the sweat from your brow and donning your new armor, you set out to find your comrades.`,
+		options: [
+			{
+				text: 'Continue tracking the army.',
+				nextID: 20,
+			},
+		],
+	},
+	{
+		id: 19,
+		text: `Checking through the skeletal frame of the tent, you appear to find very little of interest. This appears to have been a common soldiers' tent. As you begin to leave, you hear glass cracking as you take a step. You reach down to inspect the sound, and find that you have stepped on a healing potion and broken it. Unfortunate.`,
+		text2: `However, that potion was part of a pair, and you pocket the intact potion for later use.`,
+		text3: `With extra healing in hand, you set out to find your comrades.`,
+		options: [
+			{
+				text: 'Continue tracking the army.',
+				nextID: 20,
+			},
+		],
+	},
+	{
+		id: 20,
+		text: `You continue to the north east, following the tracks of the Grand Army. The bright cloudless sky quickly gives way to dark, overcast clouds as you trek in search of your allies. A scant few hours of walking along the path, you hear the booming of distant thunder, and a sudden torrential downpour assails you.`,
+		text2: `You spot a copse of trees nearby that can offer some modicum of shelter from the storm. You also see what appears to be a cave in the opposite direction.`,
+		options: [
+			{
+				text: 'Head for the trees.',
+				nextID: 21,
+			},
+			{
+				text: `Head for the cave.`,
+				nextID: 22,
+			},
+		],
+	},
+	{
+		id: 21,
+		text: `The thick foliage of the trees provide passable shelter from the downpour, though you feel no less cold or miserable. Gathering some branches and leaves, you attempt to make a small shelter at the base of a tree. The shelter helps, but only slightly. You will not be making much more progress today, and try to ride out the storm in the makeshift shelter.`,
+		text2: `Your night is miserable and wet, but you survive the storm unscathed. You welcome the morning sun, as it slowly heats you up and dries your clothing. You press forward.`,
+		options: [
+			{
+				text: 'Continue following the army.',
+				nextID: 24,
+			},
+		],
+	},
+	{
+		id: 22,
+		text: `You approach the cave and find that the opening seems a bit larger than you had expected. You rush inside to shelter from the storm, and hear a gutteral growling from within. Your eyes adjust to the darkness slowly, and you see that the cave is much deeper than anticipated. You continue along and see that the cave ends in a bugbear's den.`,
+		text2: `The bugbear smells you and rears up threateningly as it turns to face you. You will have to fight the bugbear if you wish to shelter in the cave.`,
+		options: [
+			{
+				text: 'Fight for the cave.',
+				nextID: 23,
+				enemyName: 'bugbear',
+			},
+			{
+				text: 'Give up the cave and head to the trees.',
+				nextID: 21,
+			},
+		],
+	},
+	{
+		id: 23,
+		text: `The bugbear falls, and with its demise you are now the owner of this cave. The bugbear appeared to have brought in wood, and other refuse, which you use to start a small fire to warm up.`,
+		text2: `Safe from the rain, with a fire to warm you, you rest comfortably in the cave, and rummage through the items left behind by the deceased bugbear. Most of the items are mundane: torn clothing, simple weapons, but one object catches your eye: a glowing axe.`,
+		text3: `Though shaped like a standard woodcutting axe, its blade is etched with runic symbols that glow faintly blue. Upon grasping its hilt, you feel a surge of power. This axe, however unlikely, is a powerful magic weapon. You would be wise to utilize it.`,
+		text4: `You rest in the cave for the night, and in the morning you find that the storm has passed.`,
+		options: [
+			{
+				text: 'Continue following the army.',
+				nextID: 24,
+				equipWeapon: Items[6],
+			},
+		],
+	},
+	{
+		id: 24,
+		text: `Node 24`,
+		options: [
+			{
+				text: 'Node 25',
+				nextID: 25,
 			},
 		],
 	},

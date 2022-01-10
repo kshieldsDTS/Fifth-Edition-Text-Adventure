@@ -6,6 +6,7 @@ function Options(props) {
 			props.restartGame()
 		} else if (props.option.addPotion) {
 			props.setPlayerStats({...props.playerStats, items: {...props.playerStats.items, consumables: {...props.playerStats.items.consumables, healingPotionCount: props.playerStats.items.consumables.healingPotionCount + props.option.addPotion}}})
+			props.setCurrentTextID(props.option.nextID);
 		} else if (props.option.healing) {
 			if (props.playerStats.currentHP+props.option.healing>props.playerStats.maxHP) {
 				props.setPlayerStats({...props.playerStats, currentHP: props.playerStats.maxHP})

@@ -23,7 +23,7 @@ const initialPlayerStats = {
         armor: Items[1],
         consumables: {
             potion: healingPotion,
-            healingPotionCount: 3,
+            healingPotionCount: 100,
         }
     }
 }

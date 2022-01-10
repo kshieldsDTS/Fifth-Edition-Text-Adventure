@@ -79,7 +79,7 @@ progress::-webkit-progress-bar {
     background-color: slategray;
     color: white;
     padding: 20px;
-    width: 90%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
