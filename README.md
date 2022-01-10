@@ -23,3 +23,4 @@ Open the code in your favorite code editor. Story elements are stored in Data/Da
 
 ## Contribution Guidelines ##
 
+Please use Issues to submit bug reports or ideas for more narratives, items, or features. If you would like to submit a new Data.js for alternative storylines, please submit it in a pull request as "Data2.js". Please follow the same format for new items.
