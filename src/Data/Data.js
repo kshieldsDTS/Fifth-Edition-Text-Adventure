@@ -36,7 +36,6 @@ export const Story = [
 	{
 		id: 3,
 		text: 'Your eyes feel as heavy as stones as they open slowly. You wince as you feel a sharp pain from the back of your head. Instinctively reaching to touch the painful area, you feel a warm wetness on your fingers. You bring your hand forth and see that you appear to be bleeding from a wound. Feeling around some more, it appears that someone had tended to your wound, though rather hastily.',
-		text2: 'Yeet',
 		options: [
 			{
 				text: 'Stand up and take stock of your situation.',
