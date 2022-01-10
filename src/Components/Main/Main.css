@@ -16,22 +16,23 @@ button {
 .main-container {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 0.5fr 2fr;
     color: white;
 }
 .character-status {
+    text-align: center;
+    padding: 10px;
     grid-column: 1 / span 2;
     grid-row: 1;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 0.5fr);
     background-color: rgb(51, 55, 59);
-    border: solid gold;
+    border: solid slategray;
     background-image: url(https://i.imgur.com/kcZuWin.jpg);
 }
 progress {
     background-color: green;
-    transition: width 250ms, background 100ms;
 }
 progress::-webkit-progress-value {
     background: green;
@@ -42,28 +43,11 @@ progress::-webkit-progress-bar {
     background: white;
     border: 1px solid black;
 }
-.icon {
-    margin: 20px;
-    max-height: 200px;
-    grid-row: 1 / span 3;
-}
-.hp {
-    grid-column: 2;
-    grid-row: 1;
-}
-.armor {
-    grid-column: 2;
-    grid-row: 2;
-}
-.atb {
-    grid-column: 2;
-    grid-row: 3;
-}
 .inventory-container {
     grid-row: 2/span 2;
     grid-column: 1/span 2;
     background-color: rgb(51, 55, 59);
-    border: solid gold;
+    border: solid slategray;
     padding: 10px;
     background-image: url(https://i.imgur.com/kcZuWin.jpg);
 }
@@ -96,7 +80,7 @@ progress::-webkit-progress-bar {
     color: white;
     border: solid red;
     padding: 20px;
-    width: 90vh;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
