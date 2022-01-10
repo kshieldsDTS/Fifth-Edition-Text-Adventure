@@ -4,6 +4,7 @@ export const Story = [
 		id: 0,
 		text: 'Welcome to the world of Hydraxus! In this text adventure, you will be playing the role of a soldier in the Grand Army of Syndri. The Grand Army has recently clashed with the enemy from the nation of Calashar. During the battle, you were wounded and knocked unconscious. Your adventure begins as your eyes begin to open... ',
 		text2: `Due to the random nature of combat, you may not always survive the early encounters. Your equipment can be upgraded to improve your chances, but sometimes fate gets its way.`,
+		text3: `WARNING: This narrative is a work in progress. Not all paths are complete!`,
 		options: [
 			{
 				text: 'Begin the adventure!',
@@ -64,7 +65,7 @@ export const Story = [
 				nextID: 6,
 			},
 			{
-				text: 'Head north. Someone might need your help!',
+				text: 'Head north. Someone might need your help! (This path is still a WIP.)',
 				nextID: 1000000,
 			},
 		],
