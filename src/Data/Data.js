@@ -2,7 +2,7 @@ import { Items } from './Items'
 export const Story = [
 	{
 		id: 0,
-		text: 'Welcome to the world of Hydraxus! In this text adventure, you will be playing the role of a soldier in the Grand Army of Syndri. The Grand Army has recently clashed with the enemy from the nation of Calashar. During the battle, you were wounded and knocked unconscious. Your adventure begins as your eyes begin to open... ',
+		text: 'Welcome to the world of Hydraxus! In this text adventure, you will be playing the role of a soldier in the Grand Army of Syndri. The Grand Army has recently clashed with the enemy from the nation of Calashar. During the battle, you were wounded and knocked unconscious. Your adventure begins as your eyes begin to open...',
 		text2: `Due to the random nature of combat, you may not always survive the early encounters. Your equipment can be upgraded to improve your chances, but sometimes fate gets its way.`,
 		text3: `WARNING: This narrative is a work in progress. Not all paths are complete!`,
 		options: [
@@ -66,7 +66,7 @@ export const Story = [
 			},
 			{
 				text: 'Head north. Someone might need your help! (This path is still a WIP.)',
-				nextID: 1000000,
+				nextID: 28,
 			},
 		],
 	},
@@ -323,11 +323,137 @@ export const Story = [
 	},
 	{
 		id: 24,
-		text: `Node 24`,
+		text: `You set out after the storm has cleared, and are now making good progress towards the army. The tracks you are following are becoming clearer and more recent. They could not have moved far during last night's storm. You march forward, your goal drawing ever nearer. Shortly after the midday sun, you crest a hill and gaze upon a welcome sight, the thousands of men in their blue and green armor marching northeast, apparently intent on continuing to Velben. They are still roughly half a mile out, but you're confident you can catch up.`,
+		text2: `As you are nearing the army, you hear a rustling in the grass to your right, followed by a click and a whoosh past your ear. You turn to the sound and see a lithe figure dressed in dark clothing. One of the famed Calashar drow scouts has attacked you!`,
 		options: [
 			{
-				text: 'Node 25',
+				text: 'Defend yourself!',
 				nextID: 25,
+				enemyName: 'drow',
+			},
+		],
+	},
+	{
+		id: 25,
+		text: `The drow, though incredibly agile and skilled, finds himself no match for your furious onslaught, and lays dead at your feet.`,
+		text2: `The distraction has put you further behind the army. You can pilfer the drow's belongings or try to catch up to the army before you lose sight of them.`,
+		options: [
+			{
+				text: 'Loot the drow.',
+				nextID: 26,
+				equipArmor: Items[7],
+			},
+			{
+				text: `Catch up to the army.`,
+				nextID: 27,
+			},
+		],
+	},
+	{
+		id: 25,
+		text: `You pilfer the drow's corpse, and find that most of his possessions are useless to you in your situation. However, you feel that his chain shirt feels very light, but also seemed to deflect your attacks well in the battle. You recall that Calashar is renowned for having the region's best armorsmiths. You are sure that this drow's armor will serve you better than anything you have found up until this point.`,
+		text2: `After putting on the dead drow's chain shirt, you realize you have lost sight of the army. You do not panic, as you are sure you can still catch up just by following their tracks.`,
+		options: [
+			{
+				text: 'Find the army.',
+				nextID: 27,
+				equipArmor: Items[7],
+			},
+		],
+	},
+	{
+		id: 27,
+		text: `As the sun sets, you finally catch up to the Grand Army of Syndri as they begin to make camp for the night. Though the scouts initially attempt to sound an alarm, they realize that you are one of their own and bring you into the camp.`,
+		text2: `The clerics tend to any wounds you may have, and the quartermaster outfits you with outerwear that more clearly identifies your allegiance. You report to your commander, who welcomes you back with open arms.`,
+		text3: `Your commander tells you to get some rest, because tomorrow will be a big day: you lay siege to the enemy capital of Velben!`,
+		options: [
+			{
+				text: 'Congratulations, you have completed the game!',
+				nextID: 2,
+			},
+		],
+	},
+	{
+		id: 28,
+		text: `You head north up the hill. As you reach the crest of the hill, you look down upon a farmstead that has been razed. The smoke is billowing from the farmhouse, which is now barely a burnt skeleton of its former glory. A handful of dead farm hands litter the fields, as well as the body of a Calashar scout.`,
+		text2: `The scout appeared to have been part of a raiding party. His gaunt features suggest that his party attacked this farmstead out of desperation or starvation. While the local farmers were no match for soldiers, this scout was unlucky enough to have his belly pierced by a pitchfork.`,
+		text3: `You can check the farmhouse, barn, or fields to see if there is anything of value. You also see tracks leading to the east.`,
+		options: [
+			{
+				text: `Check the farmhouse.`,
+				nextID: 29,
+				equipArmor: Items[8],
+			},
+			{
+				text: `Check the barn.`,
+				nextID: 30,
+			},
+			{
+				text: `Check the fields.`,
+				nextID: 31,
+			},
+			{
+				text: `Continue east.`,
+				nextID: 34,
+			},
+		],
+	},
+	{
+		id: 29,
+		text: `You carefully walk into the farmhouse. While the main fire has been extinguished by time, the building is still smoldering. You are careful not to place your bare hands on any hot surfaces. The far corner of the house appears relatively untouched by the flames, and you find a slightly charred footlocker. Opening the footlocker reveals a simple piece of leather armor. It's not much but it offers more protection than your tunic.`,
+		text2: `You don the simple armor, and realize that the sun is beginning to set. You will need to find somewhere to stay for the night.`,
+		options: [
+			{
+				text: 'Check the barn.',
+				nextID: 30,
+			},
+		],
+	},
+	{
+		id: 30,
+		text: `You tread slowly into the farmhouse. Its interior is dark, perhaps aided by the sun setting below the horizon. You check the corners for any enemies. You sense movement out the corner of your eye and face your attacker, swinging your dagger.`,
+		text2: `A pair of barn owls fly out indignantly, disturbed by your intrusion. A few more minutes, and you have cleared out the barn from any threats.`,
+		text3: `As you complete your sweep, you find a particularly large hay bale that looks incredibly comfortable right now.`,
+		text4: `You make yourself comfortable in the barn and tend to your wound as best you can.`,
+		options: [
+			{
+				text: 'Pass out on the hay bale.',
+				nextID: 32,
+				healing: 10,
+			},
+		],
+	},
+	{
+		id: 31,
+		text: `You check through the fields to see if any of the farmhands had anything of value that could help you. One of the farmhands, face down in the dirt with three arrows in his back, had a small red glass vial in his hand. He had a healing potion that he was unable to use before being killed.`,
+		text2: `You take the potion, and realize that the sun is beginning to set. You should take shelter and rest for the night before continuing on.`,
+		options: [
+			{
+				text: 'Head to the barn to rest.',
+				nextID: 30,
+				addPotion: 1,
+			},
+		],
+	},
+	{
+		id: 32,
+		text: `You awaken with a start. You hear shuffling from outside the barn. You crouch into a defensive position as a diminuitive figure enters the barn. A small goblin, looking to loot this farmstead, shouts a battle cry and charges you with his small sword!`,
+		options: [
+			{
+				text: 'Defend yourself!',
+				nextID: 33,
+				enemyName: 'goblin',
+			},
+		],
+	},
+	{
+		id: 33,
+		text: `You have slain the foul goblin. You find it unusual to find a solitary goblin so close to human civilization, but like the Calashar, it must have been desperate.`,
+		text2: `Collecting yourself, you continue east, following the tracks that you had found previously.`,
+		options: [
+			{
+				text: 'Head east.',
+				nextID: 34,
 			},
 		],
 	},

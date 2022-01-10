@@ -53,5 +53,19 @@ export const Items = [
         minDamage: 3,
         maxDamage: 8,
         description: `A normal woodcutting axe with a simple damage enchantment. How did this wind up in a bugbear's lair?`
+    },
+    {
+        id: 7,
+        name: 'drow chain shirt',
+        nameUpper: 'Drow Chain Shirt',
+        armorClass: 15,
+        description: `Forged by the master craftsmen of Calashar, this drow chain shirt offers superior protection to those made elsewhere.`
+    },
+    {
+        id: 8,
+        name: 'leather armor',
+        nameUpper: 'Leather Armor',
+        armorClass: 11,
+        description: 'Simple leather armor, barely more than a simple flap of hide across your chest.'
     }
 ];
