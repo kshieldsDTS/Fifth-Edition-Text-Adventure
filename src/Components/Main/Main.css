@@ -78,7 +78,6 @@ progress::-webkit-progress-bar {
 .narrative {
     background-color: slategray;
     color: white;
-    border: solid red;
     padding: 20px;
     width: 90%;
     display: flex;

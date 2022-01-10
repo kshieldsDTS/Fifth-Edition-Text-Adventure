@@ -25,6 +25,8 @@ function CombatModal(props) {
     function enemyAttack() {
         const damage = Math.floor(Math.random()*props.enemyStats.maxDamage+props.enemyStats.minDamage)+props.enemyStats.damageBonus;
         const attackRoll = Math.floor(Math.random()*21+props.enemyStats.attackBonus)
+        console.log(damage);
+        console.log(attackRoll);
 			if (attackRoll-props.enemyStats.attackBonus === 20) {		
 				props.setPlayerStats({ ...props.playerStats,currentHP: props.playerStats.currentHP-damage*2 });
 				setCombatMessage(`The ${props.enemyStats.nameLower} rolled a Natural 20. The ${props.enemyStats.nameLower} makes a devastating strike against you! You take ${damage*2} damage!`)

@@ -3,7 +3,6 @@ export const Story = [
 	{
 		id: 0,
 		text: 'Welcome to the world of Hydraxus! In this text adventure, you will be playing the role of a soldier in the Grand Army of Syndri. The Grand Army has recently clashed with the enemy from the nation of Calashar. During the battle, you were wounded and knocked unconscious. Your adventure begins as your eyes begin to open... ',
-		text2: 'Testing',
 		options: [
 			{
 				text: 'Begin the adventure!',
@@ -139,7 +138,30 @@ export const Story = [
 			{
 				text: `Decline the offer and continue along the river.`,
 				nextID: 12,
-			}
+			},
+		],
+	},
+	{
+		id: 11,
+		text: `You spend the night at the riverside home. It is an uneasy rest, as you try to stay awake to keep watch against any further goblin incursions. However, your recent ordeal has left you exhausted, and you find sleep irrestistable.`,
+		text2: `You awaken the following morning to the smell of food. You open your eyes to find that Delilah has made soup for the three of you. After a brief meal, with little conversation, you gather yourself and prepare to leave. As you do, Bartholomew asks that you wait a moment. He rummages through a chest and produces a simple studded leather armor chestpiece and hands it to you.`,
+		text3: `"You'll probably need this more than I do, and you'll make better use of it. Take it, and take care!" he says. The armor does not fit particularly well, but it will help keep you from harm.`,
+		options: [
+			{
+				text: 'Thank Bartholomew and Delilah for their help, then continue along the river.',
+				equipArmor: Items[3],
+				nextID: 12,
+			},
+		],
+	},
+	{
+		id: 12,
+		text: `You continue down the river, pondering what had occurred prior to waking up in the field.`,
+		options: [
+			{
+				text: 'Thank Bartholomew and Delilah for their help, then continue along the river.',
+				nextID: 12,
+			},
 		],
 	},
 ];
