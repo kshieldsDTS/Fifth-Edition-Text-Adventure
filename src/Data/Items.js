@@ -50,8 +50,8 @@ export const Items = [
         id: 6,
         name: 'moonlight axe',
         nameUpper: 'Moonlight Axe',
-        minDamage: 3,
-        maxDamage: 8,
+        minDamage: 5,
+        maxDamage: 16,
         description: `A normal woodcutting axe with a simple damage enchantment. How did this wind up in a bugbear's lair?`
     },
     {
@@ -67,5 +67,13 @@ export const Items = [
         nameUpper: 'Leather Armor',
         armorClass: 11,
         description: 'Simple leather armor, barely more than a simple flap of hide across your chest.'
+    },
+    {
+        id: 9,
+        name: `warhammer`,
+        nameUpper: `Zaakia's Warhammer`,
+        minDamage: 4,
+        maxDamage: 15,
+        description: `A heavy warhammer wielded by the former adventurer Zaakia. You can't fathom how strong she must be to use this weapon with one hand as she does.`
     }
 ];

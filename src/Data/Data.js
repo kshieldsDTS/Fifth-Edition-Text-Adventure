@@ -3,8 +3,7 @@ export const Story = [
 	{
 		id: 0,
 		text: 'Welcome to the world of Hydraxus! In this text adventure, you will be playing the role of a soldier in the Grand Army of Syndri. The Grand Army has recently clashed with the enemy from the nation of Calashar. During the battle, you were wounded and knocked unconscious. Your adventure begins as your eyes begin to open...',
-		text2: `Due to the random nature of combat, you may not always survive the early encounters. Your equipment can be upgraded to improve your chances, but sometimes fate gets its way.`,
-		text3: `WARNING: This narrative is a work in progress. Not all paths are complete!`,
+		text2: `Due to the random nature of combat, you may not always survive your encounters. Your equipment can be upgraded to improve your chances, but sometimes fate gets its way.`,
 		options: [
 			{
 				text: 'Begin the adventure!',
@@ -47,7 +46,7 @@ export const Story = [
 	},
 	{
 		id: 4,
-		text: 'With great effort, combating your aching muscles and throbbing headache, you manage to get to your feet. You quickly take stock of your equipment: your trusty weapon and your armor are both missing, though the small pouch at your waist still contains the three healing potions you had purchased before the battle. You see a dagger embedded in the ground not far from you.',
+		text: 'With great effort, combating your aching muscles and throbbing headache, you manage to get to your feet. You quickly take stock of your equipment: your trusty weapon and your armor are both missing, though the small pouch at your waist still contains the six healing potions you had purchased before the battle. You see a dagger embedded in the ground not far from you.',
 		options: [
 			{
 				text: "Take the dagger. A rogue's weapon is better than no weapon.",
@@ -65,7 +64,7 @@ export const Story = [
 				nextID: 6,
 			},
 			{
-				text: 'Head north. Someone might need your help! (This path is still a WIP.)',
+				text: 'Head north. Someone might need your help!',
 				nextID: 28,
 			},
 		],
@@ -211,7 +210,7 @@ export const Story = [
 	{
 		id: 16,
 		text: `You climb up onto a ledge to provide some measure of protection from wandering creatures before resting. Sleep does not come easily, as you keep a watchful eye and listen for any possible threats. However, you do eventually sleep as the miles of walking catch up to you.`,
-		text2: `You awaken as the sun rises. Its blinding light and heat rousing you from your slumber. You drop from the ledge and stretch a bit before following the army's tracks back toward the north, where you had come from.`,
+		text2: `You awaken as the sun rises. Its blinding light and heat rousing you from your slumber. You drop from the ledge and stretch a bit before following the army's tracks back toward the north east.`,
 		options: [
 			{
 				text: `Follow the tracks.`,
@@ -454,6 +453,133 @@ export const Story = [
 			{
 				text: 'Head east.',
 				nextID: 34,
+			},
+		],
+	},
+	{
+		id: 34,
+		text: `You head east from the farmstead, following the tracks left by the raiding party. Their tracks lead you into a dense forest. The foliage shelters you from the sun, and you carefully follow the tracks. Your pace slows, as you know that woods like these are perfect for ambushes.`,
+		text2: `As you trek deeper into the forest, you hear the sounds of steel weapons colliding and the shouts of people fighting.You pick up the pace and head toward the source of the disturbance.`,
+		text3: `You find yourself in a clearing, with a small log cabin and a tiny pond next to it. You see a soldier wearing a Calashar uniform fighting with a tall, muscular woman with short, pink hair. The woman is wielding a massive hammer, and it deftly parrying all of the soldier's attacks. Without warning, she sweeps the soldier's legs out from under him, brings the hammer back in an overhead swing, and crushes the soldier's chest. You then notice the six other dead soldiers scattered about.`,
+		text4: `The woman immediately looks in your direction, and begins menacingly walking towards you.`,
+		options: [
+			{
+				text: 'Quickly explain who you are and show you are no threat.',
+				nextID: 35,
+			},
+			{
+				text: `Back away quickly and put as much distance between you.`,
+				nextID: 38,
+			},
+		],
+	},
+	{
+		id: 35,
+		text: `The woman regards you for a moment, before swinging her hammer up and resting it on her shoulder.`,
+		text2: `"You came from the Braddock Farmstead back that way?" she asks, motioning in the direction you came from. "They all dead?" You explain that they were dead when you arrived, and you were tracking the raiders. Her expression softens. "Damn." She sighs and turns towards the log cabin. She motions for you to follow.`,
+		text3: ``,
+		options: [
+			{
+				text: 'Follow the woman to the log cabin.',
+				nextID: 36,
+			},
+			{
+				text: `Apologize and say you must be on your way.`,
+				nextID: 38,
+			},
+		],
+	},
+	{
+		id: 36,
+		text: `Inside the cabin, the woman sets her hammer down along the wall. She moves towards a kitchenette and procures a small teapot. She pours a cup of tea for each of you, and motions for you to take a seat at the table. She places a teacup in front of you.`,
+		text2: `"Name's Zaakia. I used to be a big shot adventurer, but now I'm retired. Damn soldiers don't know what's good for 'em and won't leave me well enough alone." She looks and sizes you up, and sees that you are a soldier yourself. "No offense. You Syndri folk seem nice enough. These Calashar jerks though, they could use some manners." She sips her tea. "I assume you'll be wanting to get back to your unit?" You nod. "Crash in front of the fireplace there, these woods aren't safe to travel without a guide. I'll guide you out of here in the morning.`,
+		options: [
+			{
+				text: 'Sleep in front of the fireplace',
+				nextID: 37,
+				healing: 10,
+			},
+		],
+	},
+	{
+		id: 37,
+		text: `Zaakia wakes you just before the sun rises. She offers you a morning tea before you both set out to the woods. You notice, peculiarly, that she is carrying a very large battle axe along with her hammer. Her physical strength to wield both weapons must be the stuff of legends.`,
+		text2: `Before the midday sun, Zaakia has brought you to the eastern edge of the woods. As you begin to set off, she claps a hand on your shoulder.`,
+		text3: `"Wait a sec, pal. I can't have you running around with that little poker you're carrying. Take this." she says, as she hands you the hammer she had used to great effect yesterday. You grasp it, and find it is incredibly heavy, but you can manage to wield it with both hands. She chuckles as you struggle with it initially. "Good hunting, soldier. Take care." She turns and disappears into the woods once more.`,
+		text4: `Ahead, you can see a purple crystal Obelisk, known as the Sword of Arboreas. You recall the army was going to make camp there, prior to the battle. It's the best chance you have of reconnecting with the army.`,
+		options: [
+			{
+				text: 'Head toward the obelisk.',
+				nextID: 39,
+				equipWeapon: Items[9],
+			},
+		],
+	},
+	{
+		id: 38,
+		text: `Not wanting anything to do with the giant woman, you choose to put some distance between you. You charge blindly through the forest for several hours until you find yourself on the edge of the woods with a great open plain in front of you. In the distance, you can see a massive purple crystal obelisk, known as the Sword of Arboreas. You recall that the Grand Army had planned to make camp there before the battle. It's the best chance you have of reconnecting with the army.`,
+		options: [
+			{
+				text: 'Head toward the obelisk.',
+				nextID: 39,
+			},
+		],
+	},
+	{
+		id: 39,
+		text: `You head toward the obelisk. The Sword of Arboreas' huge size makes its distance seem deceptively small. Several hours pass before you reach the base of the obelisk. You rest to catch your breath, and realize that the obelisk has a tunnel in its side that leads into its depths. You can hear running water from inside, and a beautiful singing voice.`,
+		options: [
+			{
+				text: `Follow the voice and enter the tunnel.`,
+				nextID: 40,
+			},
+		],
+	},
+	{
+		id: 40,
+		text: `You enter the tunnel, and the voice gets louder and louder. It fills your ears and is the only thing you desire. As the tunnel winds, it opens into a clear underground lake with a waterful. Sitting at the lake's edge is a humanoid figure, thin and lithe. You see its arms and realize they are wings, covered in raven black feathers. You snap from your stupor, and the creature turns to face with you its horrific, disfigured face. The harpy berserker turns to attack you!`,
+		options: [
+			{
+				text: `Defend yourself!`,
+				nextID: 41,
+				enemyName: 'berserker',
+			},
+		],
+	},
+	{
+		id: 41,
+		text: `The harpy berserker is slain, its black blood spilling onto the ground. As the creature's enchantment fades, the waterfall and lake disappear, and an awful stench assaults your senses. The creature has been luring poor souls into this room and feasting upon their flesh. Despite the smell, you feel you can find some valuable materials if you were to dig through the refuse.`,
+		options: [
+			{
+				text: 'Check the cavern for useful items.',
+				nextID: 42,
+				addPotion: 5,
+			},
+			{
+				text: `The smell is unbearable. Leave.`,
+				nextID: 43,
+			},
+		],
+	},
+	{
+		id: 42,
+		text: `While most of the equipment was damaged by the berserker in its feeding frenzy, it apparently had, at one point, the presence of mind to keep a stock of healing potions. You find five unbroken healing potions.`,
+		text2: `However, now the smell is beginning to make you feel dizzy, and you find yourself fighting your way up the tunnel back to fresh air.`,
+		options: [
+			{
+				text: 'Breathe fresh air.',
+				nextID: 43,
+			},
+		],
+	},
+	{
+		id: 43,
+		text: `Back on the surface, you fight the urge to retch. You gather yourself, and inspect the area.`,
+		text2: `You find signs that the Grand Army had made camp here at the Sword of Arboreas, but has since moved on to the norht east. You feel that you should follow, but it is nearing sunset. You would be wise to rest for the night.`,
+		options: [
+			{
+				text: 'Find a safe spot to rest.',
+				nextID: 16,
 			},
 		],
 	},
