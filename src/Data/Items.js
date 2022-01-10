@@ -28,7 +28,15 @@ export const Items = [
 		name: 'studded leather armor',
 		nameUpper: 'Studded Leather Armor',
 		armorClass: 12,
+		description: `Bartholomew's studded leather armor, which provides far better protection than a tunic.`,
+	},
+	{
+		id: 2,
+		name: 'short sword',
+		nameUpper: 'Short Sword',
+		minDamage: 1,
+		maxDamage: 6,
 		description:
-			`Bartholomew's studded leather armor, which provides far better protection than a tunic.`,
+			'A short sword with made by a skilled blacksmith. Well balanced and versatile.',
 	},
 ];

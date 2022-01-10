@@ -79,7 +79,7 @@ export const Story = [
 			},
 			{
 				text: 'Leave her be, and continue along the river.',
-				nextID: 1000000,
+				nextID: 12,
 			},
 		],
 	},
@@ -91,7 +91,7 @@ export const Story = [
 		options: [
 			{
 				text: 'Thank her for the kind offer, but decline, and continue walking down the river.',
-				nextID: 100000,
+				nextID: 12,
 			},
 			{
 				text: 'Accept the hospitality and enter the house.',
@@ -156,11 +156,75 @@ export const Story = [
 	},
 	{
 		id: 12,
-		text: `You continue down the river, pondering what had occurred prior to waking up in the field.`,
+		text: `You continue down the river, pondering what had occurred prior to waking up in the field. Your thoughts are cut short, however, as you soon hear the sounds of metal weapons clashing. As you move closer to the source of the sounds, you eventually see two combatants. One, a soldier from Calashar, and the other, a vicious orc warrior.`,
+		text2: `You watch the conflict for a few moments. The orc, clearly much stronger and more aggressive than the soldier, presses the offensive. The soldier is kept on his heels, and before long, he lets his guard down. The orc takes advantage and slashes him across the chest with its jagged axe. The soldier collapses on the ground, and the orc begins to reach down to inspect his kill, but turns at the last moment and sees you nearby. The orc charges you, axe raised high!`,
 		options: [
 			{
-				text: 'Thank Bartholomew and Delilah for their help, then continue along the river.',
-				nextID: 12,
+				text: 'Prepare to battle the orc!',
+				nextID: 13,
+				enemyName: 'orc',
+			},
+		],
+	},
+	{
+		id: 13,
+		text: `The orc warrior attempts to block your final attack with its axe, but the weapon's poor quality and shoddy worksmanship are no match for your strength. The axe shatters and your weapon buries itself in its chest. It flails pitifully for a few moments before succumbing to its wounds.`,
+		text2: `The orc's leather armor and weapon are ruined and unusuable. Inspecting the soldier's corpse, he has the look of a farmhand, barely old enough to shave his own facial hair. His eyes are locked open in terror, with the image of the hungry orc burned into them forever. His armor is ruined beyond repair by the orc's savage attacks, but his short sword appears well made, and may come in handy.`,
+		options: [
+			{
+				text: `Take the sword. He doesn't need it anymore.`,
+				nextID: 14,
+				equipWeapon: Items[4],
+			},
+			{
+				text: `Respect the soldier's body and leave the sword behind.`,
+				nextID: 14,
+			},
+		],
+	},
+	{
+		id: 14,
+		text: `You continue further down the river. As you walk along, you eventually see a large crystalline obelisk to your east. You recall that the Grand Army would use the obelisk, known as the Sword of Arboreas, as a landmark for to regroup, should there be a need for it. That would be the best place to start to figure out where to regroup with the army.`,
+		text2: `You turn away from the river and begin heading toward the obelisk. As the base of the obelisk comes into view, you hear a gutteral growling from behind you. You whirl to face the sound and find yourself facing off with a massive wolf. It stands nearly four feet tall at the shoulder, and its gray matted fur is bristling. It howls before running toward you, teeth bared.`,
+		options: [
+			{
+				text: `Defend yourself against the wolf!`,
+				nextID: 15,
+				enemyName: 'wolf',
+			},
+		],
+	},
+	{
+		id: 15,
+		text: `The wolf snarls as you attack it again and again. Its primal fury is quickly overcome by your attacks, and it gives a low whine as it eventually falls. You catch your breath and continue onward to the Sword of Arboreas.`,
+		text2: `Your long trek ends as you reach the base of the obelisk. While the Grand Army is no longer here, you can easily track it from the footprints and mud left in their wake. However, the sun is beginning to set, and it would be prudent to rest. You see a crate left behind by the army, and inside you find a pair of healing potions.`,
+		options: [
+			{
+				text: `Take the potions and rest.`,
+				nextID: 16,
+				addPotion: 2,
+			},
+		],
+	},
+	{
+		id: 16,
+		text: `You climb up onto a ledge to provide some measure of protection from wandering creatures before resting. Sleep does not come easily, as you keep a watchful eye and listen for any possible threats. However, you do eventually sleep as the miles of walking catch up to you.`,
+		text2: `You awaken as the sun rises. Its blinding light and heat rousing you from your slumber. You drop from the ledge and stretch a bit before following the army's tracks.`,
+		options: [
+			{
+				text: `Follow the tracks.`,
+				nextID: 17,
+			},
+		],
+	},
+	{
+		id: 16,
+		text: `You climb up onto a ledge to provide some measure of protection from wandering creatures before resting. Sleep does not come easily, as you keep a watchful eye and listen for any possible threats. However, you do eventually sleep as the miles of walking catch up to you.`,
+		text2: `You awaken as the sun rises. Its blinding light and heat rousing you from your slumber. You drop from the ledge and stretch a bit before following the army's tracks.`,
+		options: [
+			{
+				text: `Follow the tracks.`,
+				nextID: 17,
 			},
 		],
 	},
