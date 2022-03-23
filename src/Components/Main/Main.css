@@ -12,8 +12,35 @@ body {
 button {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
+    background-color: red;
+    color: white;
 }
 .main-container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+.character-status {
+    display: flex;
+    justify-content: space-around;
+    background-color: slategray;
+    margin-top: 3em;
+}
+.hp {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    align-items: center;
+}
+progress {
+    width: 80%;
+}
+.bonuses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* .main-container {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 0.5fr 2fr;
@@ -121,4 +148,4 @@ progress::-webkit-progress-bar {
     color: white;
     margin: 10px;
     padding: 5px;
-}
+} */
