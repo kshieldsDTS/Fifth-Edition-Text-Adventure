@@ -109,7 +109,7 @@ progress::-webkit-progress-bar {
     align-items: center;
 }
 .combat-modal p {
-    margin: 10px;
+    margin: 5px;
     padding: 15px;
 }
 .combat-modal progress {
