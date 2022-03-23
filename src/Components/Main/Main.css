@@ -13,7 +13,7 @@ button {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px;
 }
-/* .main-container {
+.main-container {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 0.5fr 2fr;
@@ -121,4 +121,4 @@ progress::-webkit-progress-bar {
     color: white;
     margin: 10px;
     padding: 5px;
-} */
+}
