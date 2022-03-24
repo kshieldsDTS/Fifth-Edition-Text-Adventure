@@ -3,7 +3,6 @@ import React from 'react';
 function Status(props) {
     return (
 		<div className='character-status'>
-            <h1>Currently undergoing maintenance!</h1>
 			<div className='hp'>
 				<p>
 					HP: {props.currentHP}/{props.maxHP}
