@@ -19,7 +19,7 @@ function Inventory(props) {
     return (
 			<div className='inventory-container'>
 				{inventoryToggle ? (
-					<div className='equipment'>
+					<div className='equipment' onClick={toggleInventory}>
 						<h3 className='item-name'>
 							Weapon: {props.items.weapon.nameUpper}
 						</h3>
