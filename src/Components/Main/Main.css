@@ -45,11 +45,22 @@ progress {
 }
 .inventory-menu {
     text-align: center;
-    width: 100vw;
     background-color: #333;
     color: white;
     margin: 0;
     padding: 1em;
+}
+.equipment {
+    padding: 1em;
+    background-color: #444;
+    color: white;
+}
+.narrative-container {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 /* .main-container {
     display: grid;
