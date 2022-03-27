@@ -1,7 +1,6 @@
 body {
     padding: 0;
     margin: 0;
-    
     background-color: black;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
@@ -38,57 +37,6 @@ progress {
     margin-bottom: 1em;
     margin-top: 1em;
     text-align: center;
-}
-.bonuses {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.inventory-container {
-    background-image: url(https://i.imgur.com/kcZuWin.jpg);
-}
-.inventory-menu {
-    text-align: center;
-    /* background-color: #333; */
-    margin: 0;
-    padding: 1em;
-}
-.equipment {
-    padding: 1em;
-    color: white;
-}
-.narrative-container {
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-image: url(https://i.imgur.com/Ml968v8.jpg);
-}
-.narrative {
-    background-color: #333;
-    padding: 1.3em;
-    overflow-y: auto;
-}
-/* .main-container {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 0.5fr 2fr;
-    color: white;
-}
-.character-status {
-    text-align: center;
-    padding: 10px;
-    grid-column: 1 / span 2;
-    grid-row: 1;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 0.5fr);
-    background-color: rgb(51, 55, 59);
-    border: solid slategray;
-    background-image: url(https://i.imgur.com/kcZuWin.jpg);
-}
-progress {
     background-color: green;
 }
 progress::-webkit-progress-value {
@@ -100,13 +48,22 @@ progress::-webkit-progress-bar {
     background: white;
     border: 1px solid black;
 }
+.bonuses {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .inventory-container {
-    grid-row: 2/span 2;
-    grid-column: 1/span 2;
-    background-color: rgb(51, 55, 59);
-    border: solid slategray;
-    padding: 10px;
     background-image: url(https://i.imgur.com/kcZuWin.jpg);
+}
+.inventory-menu {
+    text-align: center;
+    margin: 0;
+    padding: 1em;
+}
+.equipment {
+    padding: 1em;
+    color: white;
 }
 .item-name {
     text-decoration: underline;
@@ -121,26 +78,18 @@ progress::-webkit-progress-bar {
     font-size: small;
 }
 .narrative-container {
-    background-color: black;
-    grid-column: 3/span 8;
-    grid-row: 1/span 2;
-    text-align: center;
+    padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-image: url(https://i.imgur.com/Ml968v8.jpg);
-    height: 100vh;
 }
 .narrative {
-    background-color: slategray;
-    color: white;
-    padding: 20px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: #333;
+    padding: 1.3em;
+    overflow-y: scroll;
+    max-height: 50vh;
 }
 .options-container {
     display: flex;
@@ -151,6 +100,7 @@ progress::-webkit-progress-bar {
     border-radius: 5px;
     padding: 10px;
     margin: 5px;
+    color: black;
 }
 .combat-modal {
     z-index: 1;
@@ -178,4 +128,4 @@ progress::-webkit-progress-bar {
     color: white;
     margin: 10px;
     padding: 5px;
-} */
+}
